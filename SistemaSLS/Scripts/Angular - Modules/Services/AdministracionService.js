@@ -26,7 +26,7 @@
                 DeleteTipoMoneda: function (TipoMonedaDTO) {
                     return $http({
                         method: 'POST',
-                        url: '/Administracion/Delete',
+                        url: '/Administracion/DeleteTipoMoneda',
                         data: { IdTipoMoneda: TipoMonedaDTO }
                     });
                 },                
@@ -51,6 +51,55 @@
                         data: { IdMedioCobro: MedioCobroDTO }
                     });
                 },
+
+
+
+                saveTipoDocumento: function (TipoDocumentoDTO) {
+                    return $http({
+                        method: 'POST',
+                        url: '/Administracion/Post',
+                        data: { TipoDocumentoDTO: TipoDocumentoDTO }
+                    });
+                },
+                editTipoDocumento: function (TipoDocumentoDTO) {
+                    return $http({
+                        method: 'POST',
+                        url: '/Administracion/Update',
+                        data: { TipoDocumentoDTO: TipoDocumentoDTO }
+                    });
+                },
+                DeleteTipoDocumento: function (TipoDocumentoDTO) {
+                    return $http({
+                        method: 'POST',
+                        url: '/Administracion/DeleteTipoDocumento',
+                        data: { IdTipoDocumento: TipoDocumentoDTO }
+                    });
+                },
+
+
+
+                saveCondicionFiscal: function (CondicionFiscalDTO) {
+                    return $http({
+                        method: 'POST',
+                        url: '/Administracion/Post',
+                        data: { CondicionFiscalDTO: CondicionFiscalDTO }
+                    });
+                },
+                editCondicionFiscal: function (CondicionFiscalDTO) {
+                    return $http({
+                        method: 'POST',
+                        url: '/Administracion/Update',
+                        data: { CondicionFiscalDTO: CondicionFiscalDTO }
+                    });
+                },
+                DeleteCondicionFiscal: function (CondicionFiscalDTO) {
+                    return $http({
+                        method: 'POST',
+                        url: '/Administracion/DeleteCondicionFiscal',
+                        data: { IdCondicionFiscal: CondicionFiscalDTO }
+                    });
+                },
+
             };
         }]);
 

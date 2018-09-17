@@ -1,39 +1,5 @@
 ﻿<div ng-class="{'loading':  isLoading}"></div>
 <div ng-init="initAdministracion()">
-    <div class="panel panel-danger">
-        <div class="panel-heading">
-            <h3 class="panel-title">Tipo Moneda</h3>
-        </div>
-        <div class="panel-body">
-            <div class="buttonOne">
-                <button class="btn btn-dark" ng-click="CleanTipoMoneda();" data-target="#ModalCreateEditEmpresa" data-toggle="modal">
-                    <span class="glyphicon glyphicon-plus"></span>
-                </button>
-            </div>
-        </div>
-        <div class="table table-striped">
-            <table ng-table="TipoMonedaTable" id="TipoMonedaTable" class="table table-bordered">
-                <tbody>
-                    <tr ng-repeat="row in $data">
-                        <td data-title="'Acciones'" style="width:14%;">
-                            <button type="button" class="btn" ng-click="loadTipoMoneda(row)"
-                                    data-target="#ModalCreateEditEmpresa" data-toggle="modal">
-                                <i class="fas fa-pencil-alt"></i>
-                                <span class="glyphicon glyphicon-refresh"></span>
-                            </button>
-                            <button type="button" class="btn" ng-click="loadTipoMoneda(row)"
-                                    data-target="#ModalDeleteConfirm" data-toggle="modal">
-                                <i class="fas fa-trash-alt"></i>
-                                <span class="glyphicon glyphicon-remove"></span>
-                            </button>
-                        </td>
-                        <td data-title="'Nombre'">{{row.Nombre}}</td>
-                        <td data-title="'Cambio'">{{row.Cambio}}</td>                        
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
 
 
     <div class="panel panel-danger">
@@ -58,7 +24,7 @@
                                 <span class="glyphicon glyphicon-refresh"></span>
                             </button>
                             <button type="button" class="btn" ng-click="loadMedioCobro(row)"
-                                    data-target="#ModalDeleteConfirmPro" data-toggle="modal">
+                                    data-target="#ModalDeleteConfirmMedioCobro" data-toggle="modal">
                                 <i class="fas fa-trash-alt"></i>
                                 <span class="glyphicon glyphicon-remove"></span>
                             </button>
@@ -72,38 +38,153 @@
 
 
 
-    </div>
-    @*
+    @*TIPO DOCUMENTO*@
 
-        <div class="modal fade" id="ModalCreateEditEmpresa" tabindex="-1" role="dialog">
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <h3 class="panel-title">Tipo Documento</h3>
+        </div>
+        <div class="panel-body">
+            <div class="buttonOne">
+                <button class="btn btn-dark" ng-click="CleanTipoDocumento();" data-target="#ModalCreateEditTipoDocumento" data-toggle="modal">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </div>
+        </div>
+        <div class="table table-striped">
+            <table ng-table="TipoDocumentoTable" id="TipoDocumentoTable" class="table table-bordered">
+                <tbody>
+                    <tr ng-repeat="row in $data">
+                        <td data-title="'Acciones'" style="width:14%;">
+                            <button type="button" class="btn" ng-click="loadTipoDocumento(row)"
+                                    data-target="#ModalCreateEditTipoDocumento" data-toggle="modal">
+                                <i class="fas fa-pencil-alt"></i>
+                                <span class="glyphicon glyphicon-refresh"></span>
+                            </button>
+                            <button type="button" class="btn" ng-click="loadTipoDocumento(row)"
+                                    data-target="#ModalDeleteConfirmTipoDocumento" data-toggle="modal">
+                                <i class="fas fa-trash-alt"></i>
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </td>
+                        <td data-title="'Descripcion'">{{row.Descripcion}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    @*TIPO Moneda*@
+
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <h3 class="panel-title">Tipo Moneda</h3>
+        </div>
+        <div class="panel-body">
+            <div class="buttonOne">
+                <button class="btn btn-dark" ng-click="CleanTipoMoneda();" data-target="#ModalCreateEditTipoMoneda" data-toggle="modal">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </div>
+        </div>
+        <div class="table table-striped">
+            <table ng-table="TipoMonedaTable" id="TipoMonedaTable" class="table table-bordered">
+                <tbody>
+                    <tr ng-repeat="row in $data">
+                        <td data-title="'Acciones'" style="width:14%;">
+                            <button type="button" class="btn" ng-click="loadTipoMoneda(row)"
+                                    data-target="#ModalCreateEditTipoMoneda" data-toggle="modal">
+                                <i class="fas fa-pencil-alt"></i>
+                                <span class="glyphicon glyphicon-refresh"></span>
+                            </button>
+                            <button type="button" class="btn" ng-click="loadTipoMoneda(row)"
+                                    data-target="#ModalDeleteConfirmTipoMoneda" data-toggle="modal">
+                                <i class="fas fa-trash-alt"></i>
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </td>
+                        <td data-title="'Nombre'">{{row.Nombre}}</td>
+                        <td data-title="'Cambio'">{{row.Cambio}}</td>                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+    @*CONDICION FISCAL*@
+
+
+    <div class="panel panel-danger">
+    <div class="panel-heading">
+        <h3 class="panel-title">Condición Fiscal</h3>
+    </div>
+    <div class="panel-body">
+        <div class="buttonOne">
+            <button class="btn btn-dark" ng-click="CleanCondicionFiscal();" data-target="#ModalCreateEditCondicionFiscal" data-toggle="modal">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </div>
+    </div>
+    <div class="table table-striped">
+        <table ng-table="CondicionFiscalTable" id="CondicionFiscalTable" class="table table-bordered">
+            <tbody>
+                <tr ng-repeat="row in $data">
+                    <td data-title="'Acciones'" style="width:14%;">
+                        <button type="button" class="btn" ng-click="loadCondicionFiscal(row)"
+                                data-target="#ModalCreateEditCondicionFiscal" data-toggle="modal">
+                            <i class="fas fa-pencil-alt"></i>
+                            <span class="glyphicon glyphicon-refresh"></span>
+                        </button>
+                        <button type="button" class="btn" ng-click="loadCondicionFiscal(row)"
+                                data-target="#ModalDeleteConfirmCondiciónFiscal" data-toggle="modal">
+                            <i class="fas fa-trash-alt"></i>
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </td>
+                    <td data-title="'Descripcion'">{{row.Descripcion}}</td>
+                    <td data-title="'IVA'">{{row.IVA}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+    </div>
+    @*  MEDIO COBRO *@
+
+        <div class="modal fade" id="ModalCreateEditMedioCobro" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Nuevo Tipo Persona</h4>
+                        <h4 class="modal-title">Nuevo Medio de cobro</h4>
                     </div>
                     <div class="modal-body">
-                        <form name="TipoMonedaForm">
+                        <form name="MedioCobroForm">
                             <div class="inputLine">
-                                <label>Nombre</label>
-                                <input class="form-control" ng-model="TipoMoneda.Nombre" required />
-                                <label>Cambio</label>
-                                <input class="form-control" ng-model="TipoMoneda.Cambio" required />
-                                <label>Fecha</label>
-                                <input class="form-control" ng-model="TipoMoneda.Fecha" required />
+                                <label>Descripcion</label>
+                                <input class="form-control" ng-model="MedioCobro.Descripcion" required />                                
                                  </div>
                         </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                         <button ng-show="isSave" type="button" class="btn buttonNew"
-                                ng-disabled="TipoMonedaForm.$invalid" data-dismiss="modal"
-                                ng-click="saveTipoMoneda()">
+                                ng-disabled="MedioCobroForm.$invalid" data-dismiss="modal"
+                                ng-click="saveMedioCobro()">
                             Crear
                         </button>
                         <button ng-show="!isSave" type="button" data-dismiss="modal"
-                                class="btn buttonNew" ng-disabled="TipoMonedaForm.$invalid"
-                                ng-click="editTipoMoneda()">
+                                class="btn buttonNew" ng-disabled="MedioCobroForm.$invalid"
+                                ng-click="editMedioCobro()">
                             Editar
                         </button>
                     </div>
@@ -128,7 +209,7 @@
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
 
-        <div class="modal fade" id="ModalDeleteConfirm" tabindex="-1" role="dialog">
+        <div class="modal fade" id="ModalDeleteConfirmMedioCobro" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -136,12 +217,236 @@
                         <h4 class="modal-title">Aviso</h4>
                     </div>
                     <div class="modal-body">
-                        <p> ¿Desea eliminar el tipo de moneda: <b>{{TipoMoneda.descripcion}}</b>?</p>
+                        <p> ¿Desea eliminar el tipo de moneda: <b>{{MedioCobro.Descripcion}}</b>?</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn buttonNew" ng-click="DeleteTipoMoneda()" data-dismiss="modal">Eliminar</button>
+                        <button type="button" class="btn buttonNew" ng-click="DeleteMedioCobro()" data-dismiss="modal">Eliminar</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
-        </div><!-- /.modal --> *@
+        </div><!-- /.modal -->
+
+
+@*  Medio cobro *@
+
+
+    
+@*  tipo documento *@
+<div class="modal fade" id="ModalCreateEditTipoDocumento" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Nuevo Medio de cobro</h4>
+            </div>
+            <div class="modal-body">
+                <form name="TipoDocumentoForm">
+                    <div class="inputLine">
+                        <label>Descripcion</label>
+                        <input class="form-control" ng-model="TipoDocumento.Descripcion" required />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button ng-show="isSave" type="button" class="btn buttonNew"
+                        ng-disabled="TipoDocumentoForm.$invalid" data-dismiss="modal"
+                        ng-click="saveTipoDocumento()">
+                    Crear
+                </button>
+                <button ng-show="!isSave" type="button" data-dismiss="modal"
+                        class="btn buttonNew" ng-disabled="TipoDocumentoForm.$invalid"
+                        ng-click="editTipoDocumento()">
+                    Editar
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="ModalMessage" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Mensaje</h4>
+            </div>
+            <div class="modal-body">
+                <p ng-class="{'success': isSuccess, 'error': !isSuccess}">{{message}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="ModalDeleteConfirmTipoDocumento" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Aviso</h4>
+            </div>
+            <div class="modal-body">
+                <p> ¿Desea eliminar el tipo de moneda: <b>{{TipoDocumento.descripcion}}</b>?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn buttonNew" ng-click="DeleteTipoDocumento()" data-dismiss="modal">Eliminar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*  Tipo Documento *@
+
+
+
+@*  TIpo moneda *@
+
+
+<div class="modal fade" id="ModalCreateEditTipoMoneda" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Nuevo Tipo Moneda</h4>
+            </div>
+            <div class="modal-body">
+                <form name="TipoMonedaForm">
+                    <div class="inputLine">
+                        <label>Nombre</label>
+                        <input class="form-control" ng-model="TipoMoneda.Nombre" required />
+                        <label>Cambio</label>
+                        <input class="form-control" ng-model="TipoMoneda.Cambio" required />
+                        <label>Fecha</label>
+                        <input class="form-control" ng-model="TipoMoneda.Fecha" required />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button ng-show="isSave" type="button" class="btn buttonNew"
+                        ng-disabled="TipoMonedaForm.$invalid" data-dismiss="modal"
+                        ng-click="saveTipoMoneda()">
+                    Crear
+                </button>
+                <button ng-show="!isSave" type="button" data-dismiss="modal"
+                        class="btn buttonNew" ng-disabled="TipoMonedaForm.$invalid"
+                        ng-click="editTipoMoneda()">
+                    Editar
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="ModalMessage" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Mensaje</h4>
+            </div>
+            <div class="modal-body">
+                <p ng-class="{'success': isSuccess, 'error': !isSuccess}">{{message}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="ModalDeleteConfirmTipoMoneda" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Aviso</h4>
+            </div>
+            <div class="modal-body">
+                <p> ¿Desea eliminar el tipo de moneda: <b>{{TipoMoneda.Descripcion}}</b>?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn buttonNew" ng-click="DeleteTipoMoneda()" data-dismiss="modal">Eliminar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*  Tipo moneda *@
+
+
+
+@*  condicion fiscal *@
+<div class="modal fade" id="ModalCreateEditCondicionFiscal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Nueva condición fiscal</h4>
+            </div>
+            <div class="modal-body">
+                <form name="CondicionFiscalForm">
+                    <div class="inputLine">
+                        <label>Descripcion</label>
+                        <input class="form-control" ng-model="CondicionFiscal.Descripcion" required />
+                        <label>IVA</label>
+                        <input class="form-control" ng-model="CondicionFiscal.IVA" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button ng-show="isSave" type="button" class="btn buttonNew"
+                        ng-disabled="CondicionFiscalForm.$invalid" data-dismiss="modal"
+                        ng-click="saveCondicionFiscal()">
+                    Crear
+                </button>
+                <button ng-show="!isSave" type="button" data-dismiss="modal"
+                        class="btn buttonNew" ng-disabled="CondicionFiscalForm.$invalid"
+                        ng-click="editCondicionFiscal()">
+                    Editar
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="ModalMessage" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Mensaje</h4>
+            </div>
+            <div class="modal-body">
+                <p ng-class="{'success': isSuccess, 'error': !isSuccess}">{{message}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="ModalDeleteConfirmCondicionFiscal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Aviso</h4>
+            </div>
+            <div class="modal-body">
+                <p> ¿Desea eliminar la condición fiscal: <b>{{CondicionFiscal.descripcion}}</b>?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn buttonNew" ng-click="DeleteCondicionFiscal()" data-dismiss="modal">Eliminar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+@*  Condicion fiscal *@

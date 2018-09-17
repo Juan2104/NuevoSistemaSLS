@@ -48,7 +48,7 @@ namespace SistemaSLS.Controllers
             {
                 MedioCobro = Mapper.Map<List<MedioCobroDTO>>(await MedioCobroService.GetAll()),
                 TipoDocumento = Mapper.Map<List<TipoDocumentoDTO>>(await TipoDocumentoService.GetAll()),
-                TipoMonedaCobro = Mapper.Map<List<TipoMonedaDTO>>(await TipoMonedaService.GetAll()),
+                TipoMoneda = Mapper.Map<List<TipoMonedaDTO>>(await TipoMonedaService.GetAll()),
                 CondicionFiscal = Mapper.Map<List<CondicionFiscalDTO>>(await CondicionFiscalService.GetAll()),
             };
 
@@ -82,6 +82,98 @@ namespace SistemaSLS.Controllers
             MedioCobroService.DeleteMedioCobro(IdMedioCobro);
             return Json("", JsonRequestBehavior.AllowGet);
         }
+
+
+
+
+        public JsonResult Post(TipoDocumentoDTO TipoDocumentoDTO)
+        {
+            var result = new
+            {
+                TipoDocumentoDTOid = TipoDocumentoService.SaveTipoDocumento(Mapper.Map<SistemaSLS.Domain.Entities.TipoDocumento>(TipoDocumentoDTO))
+            };
+
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult Update(TipoDocumentoDTO TipoDocumentoDTO)
+        {
+            var result = new
+            {
+                TipoDocumentoDTOid = TipoDocumentoService.EditTipoDocumento(Mapper.Map<SistemaSLS.Domain.Entities.TipoDocumento>(TipoDocumentoDTO))
+            };
+
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult DeleteTipoDocumento(int IdTipoDocumento)
+        {
+            TipoDocumentoService.DeleteTipoDocumento(IdTipoDocumento);
+            return Json("", JsonRequestBehavior.AllowGet);
+        }
+
+
+
+
+
+        public JsonResult Post(TipoMonedaDTO TipoMonedaDTO)
+        {
+            var result = new
+            {
+                TipoMonedaDTOid = TipoMonedaService.SaveTipoMoneda(Mapper.Map<SistemaSLS.Domain.Entities.TipoMoneda>(TipoMonedaDTO))
+            };
+
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult Update(TipoMonedaDTO TipoMonedaDTO)
+        {
+            var result = new
+            {
+                TipoMonedaDTOid = TipoMonedaService.EditTipoMoneda(Mapper.Map<SistemaSLS.Domain.Entities.TipoMoneda>(TipoMonedaDTO))
+            };
+
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult DeleteTipoMoneda(int IdTipoMoneda)
+        {
+            TipoMonedaService.DeleteTipoMoneda(IdTipoMoneda);
+            return Json("", JsonRequestBehavior.AllowGet);
+        }
+
+
+
+
+
+        public JsonResult Post(CondicionFiscalDTO CondicionFiscalDTO)
+        {
+            var result = new
+            {
+                CondicionFiscalDTOid = CondicionFiscalService.SaveCondicionFiscal(Mapper.Map<SistemaSLS.Domain.Entities.CondicionFiscal>(CondicionFiscalDTO))
+            };
+
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult Update(CondicionFiscalDTO CondicionFiscalDTO)
+        {
+            var result = new
+            {
+                CondicionFiscalDTOid = CondicionFiscalService.EditCondicionFiscal(Mapper.Map<SistemaSLS.Domain.Entities.CondicionFiscal>(CondicionFiscalDTO))
+            };
+
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult DeleteCondicionFiscal(int IdCondicionFiscal)
+        {
+            CondicionFiscalService.DeleteCondicionFiscal(IdCondicionFiscal);
+            return Json("", JsonRequestBehavior.AllowGet);
+        }
+
+
+
 
     }
 }
