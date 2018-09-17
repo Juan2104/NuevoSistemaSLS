@@ -26,8 +26,11 @@ namespace SistemaSLS.Domain.DTOs
         public bool Martes { get { return (Dias ?? "").ToString().Contains("1"); } }
         public bool Miercoles { get { return (Dias ?? "").ToString().Contains("1"); } }
         public bool Jueves { get { return (Dias ?? "").ToString().Contains("1"); } }
-        public bool Viernes { get { return (Dias ?? "").ToString().Contains("1"); } }
-
+        public bool Viernes { get { return (Dias ?? "").ToString().Contains("1"); } } 
+        public int IdPais { get; set; } 
+        public PaisDTO Pais { get; set; } 
+        public int IdInstructor { get; set; }
+        public PersonaDTO Persona { get; set; }
     }
 }
 

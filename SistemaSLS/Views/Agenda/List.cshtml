@@ -24,8 +24,45 @@
                         </button>
                          
                     </td>
-                    <td data-title="'Descripcion'">{{row.Descripcion}}</td>
-                    <td data-title="'Id Provincia'">{{row.Ciudad.Descripcion}}</td>              
+
+                    <td data-title="'Fecha'">{{row.Desde | date:"MM/dd/yyyy"}} a {{row.Hasta | date:"MM/dd/yyyy"}}</td>   
+                    <td data-title="'Hora'">{{row.HoraInicio}}</td>     
+                   
+                    <td data-title="'Lunes'">
+                        <div ng-if="row.Lunes" style="background:green;width:15px;height:15px;float:left;margin-right:2px;">
+                            <!-- code to render the regular video block -->
+                        </div> 
+                    </td>   
+                    <td data-title="'Martes'">
+                        <div ng-if="row.Martes" style="background:green;width:15px;height:15px;float:left;margin-right:2px;">
+                            <!-- code to render the regular video block -->
+                        </div>
+                    </td>
+                    <td data-title="'Martes'">
+                        <div ng-if="row.Martes" style="background:green;width:15px;height:15px;float:left;margin-right:2px;">
+                            <!-- code to render the regular video block -->
+                        </div>
+                    </td>   
+                    <td data-title="'Miercoles'">
+                        <div ng-if="row.Miercoles" style="background:green;width:15px;height:15px;float:left;margin-right:2px;">
+                            <!-- code to render the regular video block -->
+                        </div>
+                    </td>   
+                    <td data-title="'Jueves'">
+                        <div ng-if="row.Jueves" style="background:green;width:15px;height:15px;float:left;margin-right:2px;">
+                            <!-- code to render the regular video block -->
+                        </div>
+                    </td>   
+                    <td data-title="'Viernes'">
+                        <div ng-if="row.Viernes" style="background:green;width:15px;height:15px;float:left;margin-right:2px;">
+                            <!-- code to render the regular video block -->
+                        </div>
+                    </td> 
+                    <td data-title="'Estado'">{{row.Ciudad.Descripcion}}</td> 
+                    <td data-title="'Alumnos'">{{5}}</td> 
+                    <td data-title="'Instructor'">{{row.Persona.Nombre}}</td> 
+                    <td data-title="'Pais'">{{row.Pais.Descripcion}}</td>          
+                    <td data-title="'Pendiente'">{{}}</td>                
                 </tr>
             </tbody>
         </table>
