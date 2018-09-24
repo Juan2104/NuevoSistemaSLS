@@ -30,6 +30,12 @@
                         data: { IdAgenda: AgendaDTO }
                     });
                 },
+                getPais: function () {
+                    return $http({
+                        method: 'GET',
+                        url: '/Pais/Get'
+                    });
+                },
             };
         }]);
 

@@ -1,6 +1,8 @@
 ﻿angular.module('Agenda', [
     'Agenda.list.ctrl',
+    'Agenda.createOrEdit.ctrl',
     'Agenda.service',
+    'Agenda.service.navigation',
     'ngRoute',
     'ngAnimate',
     'mgcrea.ngStrap',
@@ -15,6 +17,11 @@
         $routeProvider.when('/Index', {
             templateUrl: 'AgendaList',
             controller: 'AgendaCtrl',
+        });
+
+        $routeProvider.when('/CreateOrEdit', {
+            templateUrl: 'createOrEditAgenda',
+            controller: 'createOrEditAgendaCtrl'
         });
 
         $routeProvider.otherwise({ redirectTo: '/' });

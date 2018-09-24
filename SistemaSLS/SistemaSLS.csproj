@@ -3460,6 +3460,8 @@
     <Content Include="Scripts\Angular - Modules\Administracion\AdministracionModule.js" />
     <Content Include="Scripts\Angular - Modules\Agenda\AgendaCtrl.js" />
     <Content Include="Scripts\Angular - Modules\Agenda\AgendaModule.js" />
+    <Content Include="Scripts\Angular - Modules\Agenda\createOrEditAgendaCtrl.js" />
+    <Content Include="Scripts\Angular - Modules\Agenda\navigationService.js" />
     <Content Include="Scripts\Angular - Modules\Ciudad\CiudadCtrl.js" />
     <Content Include="Scripts\Angular - Modules\Ciudad\CiudadModule.js" />
     <Content Include="Scripts\Angular - Modules\Empresa\EmpresaCtrl.js" />
@@ -3770,6 +3772,7 @@
     <Content Include="Views\Administracion\Bundle.cshtml" />
     <Content Include="Views\Administracion\Index.cshtml" />
     <Content Include="Views\Administracion\List.cshtml" />
+    <Content Include="Views\Agenda\CreateOrEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
