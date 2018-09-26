@@ -26,6 +26,7 @@ namespace SistemaSLS.Utils
           cfg.CreateMap<TipoDocumento, TipoDocumentoDTO>().ReverseMap();
           cfg.CreateMap<MedioCobro, MedioCobroDTO>().ReverseMap();
           cfg.CreateMap<CondicionFiscal, CondicionFiscalDTO>().ReverseMap();
+          cfg.CreateMap<Codigo, CodigoDTO>().ReverseMap();
           });
         }
     }

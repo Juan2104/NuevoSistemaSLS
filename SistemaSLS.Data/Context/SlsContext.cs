@@ -26,7 +26,7 @@ namespace SistemaSLS.Data.Context
         public virtual DbSet<TipoDocumento> TipoDocumento { get; set; }
         public virtual DbSet<CondicionFiscal> CondicionFiscal { get; set; }
         public virtual DbSet<MedioCobro> MedioCobro { get; set; }
-
+        public virtual DbSet<Codigo> Codigo { get; set; }
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{
         //    modelBuilder.Entity<TipoPersona>()

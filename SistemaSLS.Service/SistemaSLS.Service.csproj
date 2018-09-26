@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Services\CodigoService.cs" />
     <Compile Include="Services\CondicionFiscalService.cs" />
     <Compile Include="Services\MedioCobroService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

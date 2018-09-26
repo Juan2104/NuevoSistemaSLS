@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="DTOs\CiudadDTO.cs" />
     <Compile Include="DTOs\AgendaDTO.cs" />
+    <Compile Include="DTOs\CodigoDTO.cs" />
     <Compile Include="DTOs\CondicionFiscalDTO.cs" />
     <Compile Include="DTOs\EmpresaDTO.cs" />
     <Compile Include="DTOs\MedioCobroDTO.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Entities\Agenda.cs" />
     <Compile Include="Entities\Auditoria.cs" />
     <Compile Include="Entities\Ciudad.cs" />
+    <Compile Include="Entities\Codigo.cs" />
     <Compile Include="Entities\CondicionFiscal.cs" />
     <Compile Include="Entities\Empresa.cs" />
     <Compile Include="Entities\MedioCobro.cs" />

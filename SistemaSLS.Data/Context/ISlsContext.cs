@@ -23,6 +23,7 @@ namespace SistemaSLS.Data.Context
         DbSet<TipoDocumento> TipoDocumento { get; set; }
         DbSet<MedioCobro> MedioCobro { get; set; }
         DbSet<CondicionFiscal> CondicionFiscal { get; set; }
+        DbSet<Codigo> Codigo { get; set; }
 
 
 

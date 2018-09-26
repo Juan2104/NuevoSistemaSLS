@@ -140,6 +140,7 @@
     <Compile Include="Controllers\AdministracionController.cs" />
     <Compile Include="Controllers\AgendaController.cs" />
     <Compile Include="Controllers\CiudadController.cs" />
+    <Compile Include="Controllers\CodigoController.cs" />
     <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PaisController.cs" />
@@ -3464,6 +3465,8 @@
     <Content Include="Scripts\Angular - Modules\Ciudad\CiudadModule.js" />
     <Content Include="Scripts\Angular - Modules\Empresa\EmpresaCtrl.js" />
     <Content Include="Scripts\Angular - Modules\Empresa\EmpresaModule.js" />
+    <Content Include="Scripts\Angular - Modules\Codigo\CodigoCtrl.js" />
+    <Content Include="Scripts\Angular - Modules\Codigo\CodigoModule.js" />
     <Content Include="Scripts\Angular - Modules\Pais\PaisCtrl.js" />
     <Content Include="Scripts\Angular - Modules\Pais\PaisModule.js" />
     <Content Include="Scripts\Angular - Modules\Persona\PersonaCtrl.js" />
@@ -3473,6 +3476,7 @@
     <Content Include="Scripts\Angular - Modules\Services\AdministracionService.js" />
     <Content Include="Scripts\Angular - Modules\Services\AgendaService.js" />
     <Content Include="Scripts\Angular - Modules\Services\CiudadService.js" />
+    <Content Include="Scripts\Angular - Modules\Services\CodigoService.js" />
     <Content Include="Scripts\Angular - Modules\Services\EmpresaService.js" />
     <Content Include="Scripts\Angular - Modules\Services\PaisService.js" />
     <Content Include="Scripts\Angular - Modules\Services\PersonaService.js" />
@@ -3770,6 +3774,9 @@
     <Content Include="Views\Administracion\Bundle.cshtml" />
     <Content Include="Views\Administracion\Index.cshtml" />
     <Content Include="Views\Administracion\List.cshtml" />
+    <Content Include="Views\Codigo\Bundle.cshtml" />
+    <Content Include="Views\Codigo\List.cshtml" />
+    <Content Include="Views\Codigo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
