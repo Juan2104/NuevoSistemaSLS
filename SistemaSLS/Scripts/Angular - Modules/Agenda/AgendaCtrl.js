@@ -6,7 +6,8 @@
            '$location',
            'AgendaService',
            'NgTableParams',
-           function ($scope, $filter, $routeParams, $location, AgendaService, NgTableParams) {
+           'navigationService',
+           function ($scope, $filter, $routeParams, $location, AgendaService, NgTableParams, navigationService) {
                $scope.initAgenda = function () {
                    $scope.getAgenda();
                }
@@ -72,6 +73,10 @@
                        $scope.isSuccess = false;
                        $scope.message = result.data;
                    });
+               }
+
+               $scope.goToCreate = function () {
+                   navigationService.goToCreate();
                }
 
            }]);

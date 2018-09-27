@@ -53,7 +53,8 @@ namespace SistemaSLS
                      "~/Content/Theme/plugins/bootstrap/css/bootstrap.css",
                      "~/Content/Theme/plugins/node-waves/waves.css",
                      "~/Content/Theme/plugins/animate-css/animate.css",
-                      "~/Content/Theme/plugins/morrisjs/morris.css"));
+                     "~/Content/Theme/plugins/bootstrap-select/bootstrap-select.css",
+                      "~/Content/Theme/plugins/morrisjs/morris.css")); 
         }
     }
 }
