@@ -15,7 +15,7 @@
                    $scope.isLoading = true;
                    TipoDictadoService.getTipoDictado().then(function (response) {
                        $scope.dataToFilter = angular.copy(response.data);
-                       $scope.Tipo = new NgTableParams({ count: 20 }, { counts: [], dataset: response.data });
+                       $scope.TipoDictados = new NgTableParams({ count: 20 }, { counts: [], dataset: response.data });
                        $scope.isLoading = false;
                    }).catch(function (result) {
                        $scope.isLoading = false;
@@ -24,7 +24,7 @@
 
                $scope.CleanTipoDictado = function () {
                    $scope.isSave = true;
-                   $scope.TipoDictado = {};
+                   $scope.TipoDictados = {};
                }
 
                $scope.getTipoDictado = function () {

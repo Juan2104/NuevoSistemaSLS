@@ -67,7 +67,7 @@
                                         <label for="email_address">País de dictado físico del curso</label>
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <select class="bootstrap-select form-control show-tick" ng-options="Pais.IdPais as Pais.Descripcion for Pais in Paises" ng-model="Pais.IdPais">
+                                                <select class="bootstrap-select form-control show-tick" ng-options="Pais.IdPais as Pais.Descripcion for Pais in Paises" ng-model="Agenda.IdPais">
                                                     <option value="">Seleccione un Pais</option>
                                                     <option></option>
                                                 </select>
@@ -76,26 +76,34 @@
                                         <label for="email_address">Tipo de servicio</label>
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <select class="bootstrap-select form-control show-tick" ng-options="Pais.IdPais as Pais.Descripcion for Pais in Paises" ng-model="Pais.IdPais">
-                                                    <option value="">Seleccione un Pais</option>
+                                                <select class="bootstrap-select form-control show-tick" ng-options="TipoServicio.IdTipoServicio as TipoServicio.Descripcion for TipoServicio in TipoServicios" ng-model="Agenda.IdTipoServicio">
+                                                    <option value="">Seleccione un tipo de servicio</option>
                                                     <option></option>
+                                                </select>
+                                            </div>
+                                        </div> 
+                                        <label for="email_address">Tipo de dictado</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <select class="bootstrap-select form-control show-tick" ng-options="TipoDictado.IdTipoDictado as TipoDictado.Descripcion for TipoDictado in TipoDictados" ng-model="Agenda.IdTipoDictado" multiple>
+                                               
                                                 </select>
                                             </div>
                                         </div> 
                                         <label for="email_address">Nombre</label>
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <select class="bootstrap-select form-control show-tick" ng-options="Pais.IdPais as Pais.Descripcion for Pais in Paises" ng-model="Pais.IdPais">
+                                                @*<select class="bootstrap-select form-control show-tick" ng-options="Pais.IdPais as Pais.Descripcion for Pais in Paises" ng-model="Pais.IdPais">
                                                     <option value="">Seleccione un Pais</option>
                                                     <option></option>
-                                                </select>
+                                                </select>*@
                                             </div>
                                         </div>
                                         <label for="email_address">Código</label>
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <select class="bootstrap-select form-control show-tick" ng-options="Pais.IdPais as Pais.Descripcion for Pais in Paises" ng-model="Pais.IdPais">
-                                                    <option value="">Seleccione un Pais</option>
+                                                <select class="bootstrap-select form-control show-tick" ng-options="Codigo.IdCodigo as Codigo.Descripcion for Codigo in Codigos" ng-model="Agenda.IdCodigo">
+                                                    <option value="">Seleccione un Codigo</option>
                                                     <option></option>
                                                 </select>
                                             </div>
@@ -103,13 +111,13 @@
                                         <label for="email_address">Certificación</label>
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <select class="bootstrap-select form-control show-tick" ng-options="Pais.IdPais as Pais.Descripcion for Pais in Paises" ng-model="Pais.IdPais">
-                                                    <option value="">Seleccione un Pais</option>
+                                                @*<select class="bootstrap-select form-control show-tick" ng-options="Pais.IdPais as Pais.Descripcion for Pais in Paises" ng-model="Pais.IdPais">
+                                                    <option value="">Seleccione una certificación</option>
                                                     <option></option>
-                                                </select>
+                                                </select>*@
                                             </div>
                                         </div>
-                                        <button type="button" class="btn btn-primary m-t-15 waves-effect">LOGIN</button>
+                                        <button type="button" class="btn btn-primary m-t-15 waves-effect">Guardar</button>
                                     </form>
                                 </div>
                             </div>

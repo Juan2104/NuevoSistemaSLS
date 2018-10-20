@@ -61,7 +61,6 @@
 
     }
 ]).run(['$rootScope', function ($rootScope) {
-    $rootScope.$on('$routeChangeSuccess', function () {
-        setTimeout(pageSetUp, 200);
+    $rootScope.$on('$routeChangeSuccess', function () { 
     });
 }]);

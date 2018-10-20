@@ -41,6 +41,11 @@ namespace SistemaSLS.Controllers
             return Json(Mapper.Map<List<AgendaDTO>>(await AgendaService.GetAll()), JsonRequestBehavior.AllowGet);
         }
 
+        public JsonResult GetById(int id)
+        {
+            var agenda = Mapper.Map<AgendaDTO>(AgendaService.GetById(id));
+            return Json(agenda, JsonRequestBehavior.AllowGet);
+        }
 
         public JsonResult Post(AgendaDTO AgendaDTO)
         {

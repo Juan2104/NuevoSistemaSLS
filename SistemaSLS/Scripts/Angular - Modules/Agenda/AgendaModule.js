@@ -22,8 +22,11 @@
         $routeProvider.when('/CreateOrEdit', {
             templateUrl: 'createOrEditAgenda',
             controller: 'createOrEditAgendaCtrl'
+        }); 
+        $routeProvider.when('/CreateOrEdit/:IdAgenda', {
+            templateUrl: 'createOrEditAgenda',
+            controller: 'createOrEditAgendaCtrl'
         });
-
         $routeProvider.otherwise({ redirectTo: '/' });
 
         var regexIso8601 = /\/Date\((\d*)\)\//;
@@ -68,7 +71,8 @@
 
     }
 ]).run(['$rootScope', function ($rootScope) {
-    $rootScope.$on('$routeChangeSuccess', function () {
-        setTimeout(pageSetUp, 200);
-    });
+    //$rootScope.$on('$routeChangeSuccess', function () {
+    //    setTimeout(pageSetUp, 200);
+    //});
+    console.log("asdasdasdsadsad");
 }]);

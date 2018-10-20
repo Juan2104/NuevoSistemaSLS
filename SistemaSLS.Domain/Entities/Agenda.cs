@@ -16,7 +16,10 @@ namespace SistemaSLS.Domain.Entities
     {
         [Key]
         public int IdAgenda { get; set; }
-        public string Descripcion { get; set; } 
+        public string Descripcion { get; set; }
+        [ForeignKey("TipoServicio")]
+        public int IdTipoServicio { get; set; }
+        public virtual TipoServicio TipoServicio { get; set; }
         [ForeignKey("Ciudad")]
         public int Idciudad { get; set; } 
         public virtual Ciudad Ciudad { get; set; } 

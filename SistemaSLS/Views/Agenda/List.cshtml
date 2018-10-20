@@ -17,8 +17,7 @@
             <tbody>
                 <tr ng-repeat="row in $data">
                     <td data-title="'Acciones'" style="width:14%;">
-                         <button type="button" class="btn" ng-click="loadAgenda(row)"
-                                data-target="#ModalCreateEditEmpresa" data-toggle="modal">
+                         <button type="button" class="btn" ng-click="goToEdit(row.IdAgenda)">
                             <i class="fas fa-pencil-alt"></i>
                             <span class="glyphicon glyphicon-refresh"></span>
                         </button>

@@ -10,7 +10,13 @@
             function ($scope, $filter, $routeParams, $location, AgendaService, NgTableParams, navigationServicet) {
 
                 $scope.initAgendaCreateOrEdit = function () {
+                    if ($routeParams.IdAgenda != undefined) {
+                        $scope.getAgendaById($routeParams.IdAgenda);
+                    }
                     $scope.getPais();
+                    $scope.getTipoServicio();
+                    $scope.getCodigo();
+                    $scope.getTipoDictado(); 
                 } 
 
                 $scope.getPais = function () {
@@ -21,6 +27,41 @@
                         $scope.isLoading = false;
                     });
                 }
+
+                $scope.getTipoServicio = function () {
+                    $scope.isLoading = true;
+                    AgendaService.getTipoServicio().then(function (response) {
+                        $scope.TipoServicios = angular.copy(response.data);
+                    }).catch(function (result) {
+                        $scope.isLoading = false;
+                    });
+                }
+
+                $scope.getTipoDictado = function () {
+                    $scope.isLoading = true;
+                    AgendaService.getTipoDictado().then(function (response) {
+                        $scope.TipoDictados = angular.copy(response.data);
+                    }).catch(function (result) {
+                        $scope.isLoading = false;
+                    });
+                }
+
+                $scope.getCodigo = function () {
+                    $scope.isLoading = true;
+                    AgendaService.getCodigo().then(function (response) {
+                        $scope.Codigos = angular.copy(response.data);
+                    }).catch(function (result) {
+                        $scope.isLoading = false;
+                    });
+                }
+              
+                $scope.getAgendaById = function () {
+                    AgendaService.getAgendaById($routeParams.IdAgenda).then(function (response) { 
+                        $scope.Agenda = response.data;
+                    }).catch(function (result) {
+                        console.log("Agenda 2");
+                    });
+                };
                 //$scope.proyecto = {
                 //    PresupuestoUtilizado: 0,
                 //    Presupuesto: 0,

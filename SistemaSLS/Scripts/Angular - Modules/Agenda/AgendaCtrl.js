@@ -37,6 +37,7 @@
 
                $scope.loadAgenda = function (row) {
                    $scope.Agenda = angular.copy(row);
+                  
                }
 
                $scope.saveAgenda = function () {
@@ -77,6 +78,10 @@
 
                $scope.goToCreate = function () {
                    navigationService.goToCreate();
+               }
+
+               $scope.goToEdit = function (id) {
+                   navigationService.goToEdit(id);
                }
 
            }]);

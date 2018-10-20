@@ -13,6 +13,9 @@ namespace SistemaSLS.Domain.DTOs
 
         public CiudadDTO Ciudad { get; set; }
 
+        public int IdTipoServicio { get; set; }
+        public TipoServicioDTO TipoServicio { get; set; }
+
         public int Semana { get; set; }
 
         public DateTime Desde { get; set; }
